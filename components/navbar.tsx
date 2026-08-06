@@ -7,10 +7,10 @@ import { getSession, signOut } from "@/lib/auth/auth";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import { DropdownMenuItem } from "./ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "./ui/avatar";
 import SignOutButton from "./sign-out-btn";
 import { useSession } from "@/lib/auth/auth-client";
@@ -50,13 +50,13 @@ export default function Navbar() {
                       </AvatarFallback>
                     </Avatar>
                   </Button>
-                  <SignOutButton />
+                  
                 </DropdownMenuTrigger>
 
-                <DropdownMenuContent className="w-56" align="end">
+                <DropdownMenuContent className="w-56 bg-amber-300" align="end">
                   <DropdownMenuLabel className="font-normal">
                     <div className="flex flex-col space-y-1">
-                      <p className="text-sm font-medium leading-none">
+                      <p className="text-sm text-blue-800 font-medium leading-none">
                         {session.user.name}
                       </p>
                       <p className="text-xs leading-none text-muted-foreground">
@@ -64,7 +64,7 @@ export default function Navbar() {
                       </p>
                     </div>
                   </DropdownMenuLabel>
-                  
+                  <SignOutButton />
                 </DropdownMenuContent>
               </DropdownMenu>
             </>
