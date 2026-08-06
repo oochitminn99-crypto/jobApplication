@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -121,5 +119,3 @@ export default function SignIn() {
     </div>
   );
 }
-=======
->>>>>>> 069ee6a758faba728d6220c5119cb2f42d92ec08
