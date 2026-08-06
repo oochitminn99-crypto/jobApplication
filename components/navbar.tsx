@@ -50,6 +50,7 @@ export default function Navbar() {
                       </AvatarFallback>
                     </Avatar>
                   </Button>
+                  <SignOutButton />
                 </DropdownMenuTrigger>
 
                 <DropdownMenuContent className="w-56" align="end">
@@ -63,7 +64,7 @@ export default function Navbar() {
                       </p>
                     </div>
                   </DropdownMenuLabel>
-                  <SignOutButton />
+                  
                 </DropdownMenuContent>
               </DropdownMenu>
             </>
