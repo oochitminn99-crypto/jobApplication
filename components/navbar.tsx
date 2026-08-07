@@ -25,7 +25,6 @@ export async function Navbar() {
 
       <div className="flex items-center gap-4">
         {sessionData?.user ? (
-          // Authenticated state: Render user profile & sign out controls
           <UserMenu user={sessionData.user} />
         ) : (
           // Unauthenticated state: Render navigation auth entryways
@@ -47,6 +46,7 @@ export async function Navbar() {
       </div>
     </nav>
   );
+  
 }
 
 
