@@ -3,6 +3,7 @@ import Link from "next/link";
 import { headers } from "next/headers";
 import { auth } from "@/lib/auth/auth";
 import { UserMenu } from "./sign-out-btn";
+import { Briefcase } from "lucide-react";
 
 export async function Navbar() {
   // Fetch session data securely on the server
@@ -13,17 +14,19 @@ export async function Navbar() {
   return (
     <nav className="flex items-center justify-between border-b border-gray-200 bg-white px-6 py-4 shadow-sm">
       <div className="flex items-center gap-6">
-        <Link href="/" className="text-xl font-bold text-gray-900">
-          Job Application
+        <Link href="/" className="text-xl font-bold text-pink-400">
+          <Briefcase />
+          Job Tracker
         </Link>
-        <div className="hidden space-x-4 md:flex">
-          <Link href="/dashboard" className="text-sm text-gray-600 hover:text-gray-900">
-            Dashboard
-          </Link>
-        </div>
+        
       </div>
 
       <div className="flex items-center gap-4">
+        <div className="hidden space-x-4 md:flex">
+          <Link href="/dashboard" className="text-sm text-fuchsia-700 font-medium underline hover:text-fuchsia-900">
+            Dashboard
+          </Link>
+        </div>
         {sessionData?.user ? (
           <UserMenu user={sessionData.user} />
         ) : (

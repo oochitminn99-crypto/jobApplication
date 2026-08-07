@@ -27,10 +27,12 @@ export function UserMenu({ user }: UserMenuProps) {
 
   return (
     <div className="flex items-center gap-4">
-      <span className="text-sm font-medium">Hello, {user.name || user.email}</span>
+      <span className="text-sm font-semibold italic text-pink-500">
+        Hello, {user.name || user.email}
+      </span>
       <button
         onClick={handleSignOut}
-        className="rounded bg-red-600 px-3 py-1.5 text-sm font-semibold text-white hover:bg-red-500 transition-colors"
+        className="rounded bg-red-600 px-3 py-0.5 text-sm font-semibold text-white hover:bg-red-500 hover:font-bold hover:italic transition-colors"
       >
         Sign Out
       </button>
