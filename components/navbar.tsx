@@ -1,4 +1,56 @@
-"use client";
+// components/navbar.tsx
+import Link from "next/link";
+import { headers } from "next/headers";
+import { auth } from "@/lib/auth/auth";
+import { UserMenu } from "./sign-out-btn";
+
+export async function Navbar() {
+  // Fetch session data securely on the server
+  const sessionData = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  return (
+    <nav className="flex items-center justify-between border-b border-gray-200 bg-white px-6 py-4 shadow-sm">
+      <div className="flex items-center gap-6">
+        <Link href="/" className="text-xl font-bold text-gray-900">
+          Job Application
+        </Link>
+        <div className="hidden space-x-4 md:flex">
+          <Link href="/dashboard" className="text-sm text-gray-600 hover:text-gray-900">
+            Dashboard
+          </Link>
+        </div>
+      </div>
+
+      <div className="flex items-center gap-4">
+        {sessionData?.user ? (
+          // Authenticated state: Render user profile & sign out controls
+          <UserMenu user={sessionData.user} />
+        ) : (
+          // Unauthenticated state: Render navigation auth entryways
+          <div className="flex items-center gap-3">
+            <Link
+              href="/sign-in"
+              className="text-sm font-medium text-gray-700 hover:text-gray-900"
+            >
+              Sign In
+            </Link>
+            <Link
+              href="/sign-up"
+              className="rounded bg-indigo-600 px-3.5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+            >
+              Sign Up
+            </Link>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+}
+
+
+/*"use client";
 
 import { Briefcase } from "lucide-react";
 import Link from "next/link";
@@ -87,4 +139,4 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+}*/

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
-import Navbar from "@/components/navbar";
+import {Navbar} from "@/components/navbar";
 
 /*
 import { Geist, Geist_Mono } from "next/font/google";
@@ -33,7 +33,7 @@ export default function RootLayout({
         
       >
         <Navbar />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
