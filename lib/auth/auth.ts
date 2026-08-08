@@ -21,12 +21,12 @@ export const auth = betterAuth({
           after: async (user) => {
 
             if (user.id) {
-              await initializeUserBoard(user.id)
+              await initializeUserBoard(user.id);
             }
-          }
-        }
-      }
-    }
+          },
+        },
+      },
+    },
 });
 
 export async function getSession() {
