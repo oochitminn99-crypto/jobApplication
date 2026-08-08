@@ -17,5 +17,6 @@ export default async function proxy(request: NextRequest) {
         return NextResponse.redirect(new URL("/dashboard", request.url));
     }*/
 
-    return NextResponse.next();
+    //return NextResponse.next();
+    return NextResponse.redirect(new URL("/dashboard", request.url));
 }
