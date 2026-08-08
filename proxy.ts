@@ -11,12 +11,11 @@ export default async function proxy(request: NextRequest) {
     }
 
     /*const isSignUpPage = request.nextUrl.pathname.startsWith("/sign-up");
-    const isSignInPage = request.nextUrl.pathname.startsWith("/sign-in");
+    const isSignInPage = request.nextUrl.pathname.startsWith("/sign-in");*/
 
-    if((isSignInPage || isSignUpPage) && session?.user) {
+    if(isDashboardPage && session?.user) {
         return NextResponse.redirect(new URL("/dashboard", request.url));
-    }*/
+    }
 
-    //return NextResponse.next();
-    return NextResponse.redirect(new URL("/dashboard", request.url));
+    return NextResponse.next();
 }
