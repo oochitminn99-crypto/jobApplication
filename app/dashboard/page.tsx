@@ -1,4 +1,4 @@
-"use cache";
+"use cache"
 
 import { getSession } from "@/lib/auth/auth";
 import connectDB from "@/lib/db";
@@ -8,7 +8,7 @@ import KanbanBoard from "@/components/kanban-board";
 import { Suspense } from "react";
 
 async function getBoard(userId: string) {
-  
+  "use cache"
   await connectDB();
 
   const boardDoc = await Board.findOne({
