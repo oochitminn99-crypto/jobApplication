@@ -84,7 +84,7 @@ export default function CreateJobApplicationDialog({
         <form className="space-y-1" onSubmit={handleSubmit}>
           <div className="space-y-1">
             <div className="grid grid-cols-2 px-4 py-1">
-              <div className="space-y-0">
+              <div className="space-y-0.5">
                 <Label htmlFor="company">Company *</Label>
                 <Input
                   id="company"
@@ -95,7 +95,7 @@ export default function CreateJobApplicationDialog({
                   }
                 />
               </div>
-              <div className="space-y-0">
+              <div className="space-y-0.5">
                 <Label htmlFor="position">Position *</Label>
                 <Input
                   id="position"
@@ -108,7 +108,7 @@ export default function CreateJobApplicationDialog({
               </div>
             </div>
             <div className="grid grid-cols-2 px-4 py-1">
-              <div className="space-y-0">
+              <div className="space-y-0.5">
                 <Label htmlFor="location">Location</Label>
                 <Input
                   id="location"
@@ -118,7 +118,7 @@ export default function CreateJobApplicationDialog({
                   }
                 />
               </div>
-              <div className="space-y-0">
+              <div className="space-y-0.5">
                 <Label htmlFor="salary">Salary</Label>
                 <Input
                   id="salary"
@@ -130,7 +130,7 @@ export default function CreateJobApplicationDialog({
                 />
               </div>
             </div>
-            <div className="space-y-0">
+            <div className="space-y-0.5">
               <Label htmlFor="jobUrl">Job URL</Label>
               <Input
                 id="jobUrl"
@@ -142,7 +142,7 @@ export default function CreateJobApplicationDialog({
                 }
               />
             </div>
-            <div className="space-y-0">
+            <div className="space-y-0.5">
               <Label htmlFor="tags">Tags (comma-separated)</Label>
               <Input
                 id="tags"
@@ -153,7 +153,7 @@ export default function CreateJobApplicationDialog({
                 }
               />
             </div>
-            <div className="space-y-0">
+            <div className="space-y-0.5">
               <Label htmlFor="description">Description</Label>
               <Textarea
                 id="description"
@@ -165,7 +165,7 @@ export default function CreateJobApplicationDialog({
                 }
               />
             </div>
-            <div className="space-y-0">
+            <div className="space-y-0.5">
               <Label htmlFor="notes">Notes</Label>
               <Textarea
                 id="notes"
