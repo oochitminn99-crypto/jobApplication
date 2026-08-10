@@ -76,15 +76,15 @@ export default function CreateJobApplicationDialog({
           Add Job
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-2xl">
+      <DialogContent className="max-w-2xl max-h-3/5">
         <DialogHeader>
           <DialogTitle>Add Job Application</DialogTitle>
           <DialogDescription>Track a new job application</DialogDescription>
         </DialogHeader>
-        <form className="space-y-4" onSubmit={handleSubmit}>
-          <div className="space-y-4">
+        <form className="space-y-3" onSubmit={handleSubmit}>
+          <div className="space-y-3">
             <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
+              <div className="space-y-1">
                 <Label htmlFor="company">Company *</Label>
                 <Input
                   id="company"
@@ -95,7 +95,7 @@ export default function CreateJobApplicationDialog({
                   }
                 />
               </div>
-              <div className="space-y-2">
+              <div className="space-y-1">
                 <Label htmlFor="position">Position *</Label>
                 <Input
                   id="position"
@@ -108,7 +108,7 @@ export default function CreateJobApplicationDialog({
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-2">
+              <div className="space-y-1">
                 <Label htmlFor="location">Location</Label>
                 <Input
                   id="location"
@@ -118,7 +118,7 @@ export default function CreateJobApplicationDialog({
                   }
                 />
               </div>
-              <div className="space-y-2">
+              <div className="space-y-1">
                 <Label htmlFor="salary">Salary</Label>
                 <Input
                   id="salary"
@@ -130,7 +130,7 @@ export default function CreateJobApplicationDialog({
                 />
               </div>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-1">
               <Label htmlFor="jobUrl">Job URL</Label>
               <Input
                 id="jobUrl"
@@ -142,7 +142,7 @@ export default function CreateJobApplicationDialog({
                 }
               />
             </div>
-            <div className="space-y-2">
+            <div className="space-y-1">
               <Label htmlFor="tags">Tags (comma-separated)</Label>
               <Input
                 id="tags"
@@ -153,7 +153,7 @@ export default function CreateJobApplicationDialog({
                 }
               />
             </div>
-            <div className="space-y-2">
+            <div className="space-y-1">
               <Label htmlFor="description">Description</Label>
               <Textarea
                 id="description"
@@ -165,7 +165,7 @@ export default function CreateJobApplicationDialog({
                 }
               />
             </div>
-            <div className="space-y-2">
+            <div className="space-y-1">
               <Label htmlFor="notes">Notes</Label>
               <Textarea
                 id="notes"

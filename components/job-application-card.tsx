@@ -172,15 +172,15 @@ export default function JobApplicationCard({
       </Card>
 
       <Dialog open={isEditing} onOpenChange={setIsEditing}>
-        <DialogContent className="max-w-2xl max-h-4/5">
+        <DialogContent className="max-w-2xl">
           <DialogHeader>
             <DialogTitle>Add Job Application</DialogTitle>
             <DialogDescription>Track a new job application</DialogDescription>
           </DialogHeader>
-          <form className="space-y-3" onSubmit={handleUpdate}>
-            <div className="space-y-3">
+          <form className="space-y-4" onSubmit={handleUpdate}>
+            <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-1">
+                <div className="space-y-2">
                   <Label htmlFor="company">Company *</Label>
                   <Input
                     id="company"
@@ -191,7 +191,7 @@ export default function JobApplicationCard({
                     }
                   />
                 </div>
-                <div className="space-y-1">
+                <div className="space-y-2">
                   <Label htmlFor="position">Position *</Label>
                   <Input
                     id="position"
@@ -204,7 +204,7 @@ export default function JobApplicationCard({
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-1">
+                <div className="space-y-2">
                   <Label htmlFor="location">Location</Label>
                   <Input
                     id="location"
@@ -214,7 +214,7 @@ export default function JobApplicationCard({
                     }
                   />
                 </div>
-                <div className="space-y-1">
+                <div className="space-y-2">
                   <Label htmlFor="salary">Salary</Label>
                   <Input
                     id="salary"
@@ -226,7 +226,7 @@ export default function JobApplicationCard({
                   />
                 </div>
               </div>
-              <div className="space-y-1">
+              <div className="space-y-2">
                 <Label htmlFor="jobUrl">Job URL</Label>
                 <Input
                   id="jobUrl"
@@ -238,7 +238,7 @@ export default function JobApplicationCard({
                   }
                 />
               </div>
-              <div className="space-y-1">
+              <div className="space-y-2">
                 <Label htmlFor="tags">Tags (comma-separated)</Label>
                 <Input
                   id="tags"
@@ -249,7 +249,7 @@ export default function JobApplicationCard({
                   }
                 />
               </div>
-              <div className="space-y-1">
+              <div className="space-y-2">
                 <Label htmlFor="description">Description</Label>
                 <Textarea
                   id="description"
@@ -261,7 +261,7 @@ export default function JobApplicationCard({
                   }
                 />
               </div>
-              <div className="space-y-1">
+              <div className="space-y-2">
                 <Label htmlFor="notes">Notes</Label>
                 <Textarea
                   id="notes"
