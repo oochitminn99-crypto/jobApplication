@@ -97,14 +97,14 @@ export default function JobApplicationCard({
         {...dragHandleProps}
       >
         <CardContent className="p-4">
-          <div className="flex items-start justify-between gap-2">
+          <div className="flex items-start justify-between gap-2 bg-[#00008b]">
             <div className="flex-1 min-w-0">
-              <h3 className="font-semibold text-sm mb-1">{job.position}</h3>
-              <p className="text-xs text-muted-foreground mb-2">
+              <h3 className="font-semibold text-sm mb-1 text-[#faf92a]">{job.position}</h3>
+              <p className="text-xs mb-2 text-[#faf92a]">
                 {job.company}
               </p>
               {job.description && (
-                <p className="text-xs text-muted-foreground mb-2 line-clamp-2">
+                <p className="text-xs mb-2 line-clamp-2 text-[#faf92a]">
                   {job.description}
                 </p>
               )}
