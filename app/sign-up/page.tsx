@@ -45,6 +45,7 @@ export default function SingUp() {
                 setError(result.error.message ?? "Failed to sign up");
             } else {
                 router.push("/sign-in");
+                router.refresh();
             }
         } catch (err) {
             setError("An unexpected error occurred");
