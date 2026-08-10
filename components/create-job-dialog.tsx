@@ -76,14 +76,14 @@ export default function CreateJobApplicationDialog({
           Add Job
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-2xl max-h-11/12">
+      <DialogContent className="max-w-2xl max-h-full">
         <DialogHeader>
           <DialogTitle>Add Job Application</DialogTitle>
           <DialogDescription>Track a new job application</DialogDescription>
         </DialogHeader>
         <form className="space-y-1" onSubmit={handleSubmit}>
           <div className="space-y-1">
-            <div className="grid grid-cols-2 px-4 py-1">
+            <div className="grid grid-cols-2 gap-2.5">
               <div className="space-y-0.5">
                 <Label htmlFor="company">Company *</Label>
                 <Input
@@ -107,7 +107,7 @@ export default function CreateJobApplicationDialog({
                 />
               </div>
             </div>
-            <div className="grid grid-cols-2 px-4 py-1">
+            <div className="grid grid-cols-2 gap-2.5">
               <div className="space-y-0.5">
                 <Label htmlFor="location">Location</Label>
                 <Input
