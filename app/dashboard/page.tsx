@@ -1,3 +1,5 @@
+"use cache";
+
 import { getSession } from "@/lib/auth/auth";
 import connectDB from "@/lib/db";
 import { Board } from "@/lib/models";
@@ -9,7 +11,6 @@ async function getBoard(userId: string) {
   
   await connectDB();
 
-  "use cache";
   const boardDoc = await Board.findOne({
     userId: userId,
     name: "Job Hunt",
