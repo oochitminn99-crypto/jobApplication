@@ -6,7 +6,7 @@ import KanbanBoard from "@/components/kanban-board";
 import { Suspense } from "react";
 
 async function getBoard(userId: string) {
-
+ 'use cache'
   await connectDB();
 
   const boardDoc = await Board.findOne({
@@ -23,7 +23,7 @@ async function getBoard(userId: string) {
   if (!boardDoc) return null;
 
   const board = JSON.parse(JSON.stringify(boardDoc));
- 'use cache'
+ 
   return board;
 }
 
