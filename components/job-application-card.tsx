@@ -172,7 +172,7 @@ export default function JobApplicationCard({
       </Card>
 
       <Dialog open={isEditing} onOpenChange={setIsEditing}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent className="max-w-2xl max-h-4/5">
           <DialogHeader>
             <DialogTitle>Add Job Application</DialogTitle>
             <DialogDescription>Track a new job application</DialogDescription>
