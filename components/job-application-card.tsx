@@ -133,7 +133,7 @@ export default function JobApplicationCard({
             </div>
             <div className="flex items-start gap-1">
               <DropdownMenu>
-                <DropdownMenuTrigger asChild>
+                <DropdownMenuTrigger>
                   <Button variant="ghost" size="icon" className="h-6 w-6">
                     <MoreVertical className="h-4 w-4" />
                   </Button>
