@@ -6,10 +6,10 @@ import KanbanBoard from "@/components/kanban-board";
 import { Suspense } from "react";
 
 async function getBoard(userId: string) {
-  "use cache";
-
+  
   await connectDB();
 
+  "use cache";
   const boardDoc = await Board.findOne({
     userId: userId,
     name: "Job Hunt",
