@@ -37,7 +37,7 @@ export function UserMenu({ user }: UserMenuProps) {
         className="relative h-8 w-8 rounded-full"
       >
         <Avatar className="h-8 w-8">
-          <AvatarFallback className="bg-primary text-white">
+          <AvatarFallback>
             {user.image}
           </AvatarFallback>
         </Avatar>
