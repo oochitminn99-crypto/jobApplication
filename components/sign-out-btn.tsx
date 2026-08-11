@@ -2,6 +2,8 @@
 
 import { authClient } from "@/lib/auth/auth-client";
 import { useRouter } from "next/navigation";
+import {Button} from "@/components/ui/button";
+import {Avatar, AvatarFallback} from "@/components/ui/avatar";
 
 interface UserMenuProps {
   user: {
@@ -28,17 +30,39 @@ export function UserMenu({ user }: UserMenuProps) {
   return (
     <div className="flex items-center gap-4">
       <span className="text-sm font-semibold italic text-pink-500">
-        Hello, {user.name || user.email}
+        {user.name || user.email}
       </span>
+      <Button
+        variant="ghost"
+        className="relative h-8 w-8 rounded-full"
+      >
+        <Avatar className="h-8 w-8">
+          <AvatarFallback className="bg-primary text-white">
+            {user.image}
+          </AvatarFallback>
+        </Avatar>
+      </Button>
+
       <button
         onClick={handleSignOut}
-        className="rounded bg-red-600 px-3 py-0.5 text-sm font-semibold text-white hover:bg-red-500 hover:font-bold hover:italic transition-colors"
+        className="rounded-md bg-red-600 px-2 py-0.5 text-sm font-semibold text-white hover:bg-red-500 hover:font-bold hover:italic transition-colors"
       >
         Sign Out
       </button>
     </div>
   );
 }
+
+/*<Button
+       variant="ghost"
+       className="relative h-8 w-8 rounded-full"
+     >
+       <Avatar className="h-8 w-8">
+         <AvatarFallback className="bg-primary text-white">
+           {session.user.name[0].toUpperCase()}
+         </AvatarFallback>
+       </Avatar>
+  </Button>*/
 
 
 /*"use client";
