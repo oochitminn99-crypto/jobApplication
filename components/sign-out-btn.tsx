@@ -2,8 +2,6 @@
 
 import { authClient } from "@/lib/auth/auth-client";
 import { useRouter } from "next/navigation";
-import {Button} from "@/components/ui/button";
-import {Avatar, AvatarFallback} from "@/components/ui/avatar";
 
 interface UserMenuProps {
   user: {
@@ -32,16 +30,6 @@ export function UserMenu({ user }: UserMenuProps) {
       <span className="text-sm font-semibold italic text-pink-500">
         {user.name || user.email}
       </span>
-      <Button
-        variant="ghost"
-        className="relative h-8 w-8 rounded-full"
-      >
-        <Avatar className="h-8 w-8">
-          <AvatarFallback>
-            {user.image}
-          </AvatarFallback>
-        </Avatar>
-      </Button>
 
       <button
         onClick={handleSignOut}
