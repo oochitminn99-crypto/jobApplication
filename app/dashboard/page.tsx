@@ -50,7 +50,7 @@ async function DashboardPage() {
 
 export default async function Dashboard() {
   return (
-    <Suspense fallback={<p>Loading...</p>}>
+    <Suspense fallback={<p className="text-5xl text-fuchsia-600 font-bold italic text-center mt-36">Loading...</p>}>
       <DashboardPage />
     </Suspense>
   );
